@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions</title>
+	<style>
+	body {font-family: Verdana, Arial, sans-serif}
+	h1 {color: green;}
+	h4 {color: blue; margin-bottom: 5px;}
+	p {padding-left: 20px; margin-top: 5px;}
+	code {font-size: 1.3em; color: red;}
+	</style>
+	<script>
+	// Task 1: Write either a function definition
+	//	or function expression (your choice)
+	//	that accepts 3 values and returns the average
+	//	Name your definition or expression accordingly.
+    function avgNumber(score1, score2, score3){
+      return (score1 + score2 + score3) / 3;
+    }
+
+	</script>
+</head>
+<body>
+	<h1>JavaScript Assignment - Functions</h1>
+	<script>
+		var score1 = parseInt(window.prompt("Enter score 1"));
+		var score2 = parseInt(window.prompt("Enter score 2"));
+		var score3 = parseInt(window.prompt("Enter score 3"));
+
+		// Task 2:  write the code to call the function
+		//	passing to it the 3 scores.  
+		//  Store the result in a variable named avg.
+    let avg = avgNumber(score1, score2, score3)
+
+		document.write("<h4>Output:</h4>");
+		document.write("Score 1: " + score1 + "<br>");
+		document.write("Score 2: " + score2 + "<br>");
+		document.write("Score 3: " + score3 + "<br>");
+    
+
+		// Task 3:  write the code to output the 
+		//	average to 2 decimal places (see sampleoutput.png).
+    document.write("Average: " + avg.toFixed(2));
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+	<title>Strings</title>
+	<style>
+		body {font-family: Arial, Verdana, sans-serif; margin: 20px;}
+		h1 {color: blue;}
+		h2 {color: green;}
+	</style>
+</head>
+<body>
+	<h1>Strings</h1>	
+	<h2>Task 1 - Reverse the words in a phrase</h2>
+	<script>
+    var string1 = "Here's to the crazy ones";
+    document.write("Original string: <b>" + string1 + "</b>");
+    document.write("<br><br>String reversed:<br><br>");
+    var reversedString1 = string1.split(" ").reverse().join(" ");    
+    document.write(reversedString1);
+  </script>
+	<h2>Task 2 - Count the vowels in the string</h2>
+	<script>
+    var letterA = string1.match(/[aA]/g);
+    var letterE = string1.match(/[eE]/g);
+    var letterI = string1.match(/[iI]/g);
+    var letterO = string1.match(/[oO]/g);
+    var letterU = string1.match(/[uU]/g);
+
+    document.write("There are " + (letterA ? letterA.length : 0) + " A's in the string<br>");
+    document.write("There are " + (letterE ? letterE.length : 0) + " E's in the string<br>");  
+    document.write("There are " + (letterI ? letterI.length : 0) + " I's in the string<br>"); 
+    document.write("There are " + (letterO ? letterO.length : 0) + " O's in the string<br>"); 
+    document.write("There are " + (letterU ? letterU.length : 0) + " U's in the string<br>");  
+  </script>
+	
+  <h2>Task 3 - Replace words</h2>
+	<script>
+    document.write("Original: <b>" + string1 + "</b><br>");
+
+    var stringReplace = string1.replace("crazy ones", "cool people in Mordor");
+    document.write("New: <b>" + stringReplace + "</b>");
+    
+  </script>
+	
+</body>
+</html>

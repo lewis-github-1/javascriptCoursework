@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+	<title>Math</title>
+	<style>
+		body {font-family: Arial, Verdana, sans-serif; margin: 20px;}
+		h1 {color: blue;}
+		h2 {color: green;}
+		h3 {color: purple; text-decoration: underline;}
+	</style>
+</head>
+<body>
+	<h1>Math</h1>	
+	<h2>Math</h2>
+  <h3> PI, ceil(), and floor() </h3>
+    <script>
+      var radius = 10;
+      var area = Math.PI * (radius * radius);
+      document.write("The area is " + area + "<br>");
+      document.write("That same number using ceil() is: " + Math.ceil(area) + "<br>");
+      document.write("That same number using floor() is: " + Math.floor(area) + "<br>");            </script>
+    <h3>Random number </h3>
+    <script>
+      var rand = Math.floor(Math.random() * 10 + 1);
+      document.write("My random number is: " + rand + "<br>");
+    </script>
+	  <hr>
+	<h2>Number</h2>
+    <h3>toFixed()</h3>
+    <script>
+      document.write("My circle area to 2 decimal places is: " + area.toFixed(2) + "<br>");
+    </script>
+	<h2>Date</h2>
+    <h3>Date Methods</h3>
+    <script>
+      var today = new Date();
+      var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      
+      var birthDate = new Date("January 1, 1980");
+      document.write("Today is " + days[today.getDay()] + ", ");
+      document.write(months[birthDate.getMonth()] + " ");
+      document.write(birthDate.getDate() + ", " + birthDate.getFullYear() + "<br>");
+      
+      document.write("My date of birth is " + days[birthDate.getDay()] + ", ");
+      document.write(months[birthDate.getMonth()] + " ");
+      document.write(birthDate.getDate() + ", " + birthDate.getFullYear() + "<br>");
+
+      var yearsOld = (today - birthDate) / (1000 * 60 * 60 * 24 * 365);
+      document.write("I am " + yearsOld.toFixed(2) + " years old as of today<br>");
+
+      document.write("An easier way to write the today variable is " + today.toDateString() + "<br>");
+      document.write("A long way to write the today variable is " + today.toString() + "<br>");
+      
+    </script>
+    <hr>
+</body>
+</html>

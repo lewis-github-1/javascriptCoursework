@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<head>
+	<title>CSCI131 07 Practice</title>
+	<style>
+		body {font-family: Arial, Verdana, sans-serif; margin: 20px;}
+		h1 {color: blue;}
+		h2 {color: green;}
+		h3 {color: purple; text-decoration: underline;}
+		p {font-style: italic; color: blue; font-weight: bold;}
+	</style>
+</head>
+<body>
+		<h1>CSCI-131 Practice 07</h1>
+		<div>	
+			<h2>Arrays</h2>
+    <div id="examples">
+	<script>
+		// function to display array elements so that you don't have to write it each time
+  function displayArray(array) {
+    for (var i = 0; i < array.length; i++) {
+      document.write(array[i] + "<br>");
+    }
+    document.write("<br>");
+  }
+	
+		// Task #1:
+		// create an array to hold 3 names:  Bob, Tom, and Bill and then display
+		document.write("<h3>Task #1 - Create an array</h3>");
+    var names = ["Bob", "Tom", "Bill"];
+    document.write("<p>The names after they are first added are: </p>");
+    displayArray(names);    
+		
+		// Task #2
+		// add the name "Sue" to be the first element in the array and then display
+		document.write("<h3>Task #2 - Add element at the beginning of an array</h3>");
+		names.unshift("Sue");
+    document.write("<p>The names after adding Sue as the first element are:</p>");
+    displayArray(names);
+			
+		// Task #3
+		// sort the array and then redisplay
+		document.write("<h3>Task #3 - Sort the array</h3>");
+		names.sort();
+    document.write("<p>The names after sorting are: </p>");
+    displayArray(names);
+		
+		// Task #4
+		// reverse sort the array and then display
+		document.write("<h3>Task #4 - Reverse sort the array</h3>");
+		names.reverse();
+    document.write("<p>The names after reverse sorting are </p>");
+    displayArray(names);
+		
+		// Task #5
+		// replace the name Bob with Don then display
+		document.write("<h3>Task #5 - Replace an element</h3>");
+		names.splice(2, 1, "Don");
+    document.write("<p>The names after replacing Bob with Don are: </p>");
+    displayArray(names);
+		
+		// Task #6
+		// Add the name Evan to the end of the array using the array length and [ ] and display
+		document.write("<h3>Task #6 - Add element to end using [ ]</h3>");
+		names[names.length] = "Evan";
+    document.write("<p>The names after adding Evan to the end using [ ] are: </p>");
+    displayArray(names);
+		
+		// Task #7
+		// Add the name Sally to the end of the array using push funciton and display
+		document.write("<h3>Task #7 - Add element to end using a function</h3>");
+		names.push("Sally");
+    document.write("<p>The names after adding Sally to the end using an array function are: </p>");
+    displayArray(names);
+		
+	</script>
+    </div>
+</body>
+</html>

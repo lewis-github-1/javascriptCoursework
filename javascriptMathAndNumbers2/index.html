@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<head>
+	<title>Math</title>
+	<style>
+		body {font-family: Arial, Verdana, sans-serif; margin: 20px;}
+		h1 {color: blue;}
+		h2 {color: green;}
+		h3 {color: purple; text-decoration: underline;}
+	</style>
+</head>
+<body>
+	<h1>Math</h1>	
+	<h2>Math</h2>
+	<h3>PI, ceil(), and floor()</h3>
+	<script>
+		// Task #1) Prompt the user for the radius
+		var radiusPrompt = prompt("What is the radius?");
+		
+		// Task #2) Calculate the circumference using 2 x pi x the radius
+		var piCalc = Math.PI;
+    var circum = 2 * piCalc * radiusPrompt;
+
+		// Task #3) Display the circumference to 3 decimal places
+		document.write("The circumference is " + circum.toFixed(3) + "<br>");
+
+		// Task #4) Display the circumference to the next highest and lowest integer values
+    document.write("That same number using ceil() is: " + Math.ceil(circum) + "<br>");
+    document.write("That same number using floor() is: " + Math.floor(circum) + "<br>");
+    
+	</script>
+	<h3>Random number</h3>
+	<script>
+		// Task #4) Using a loop, generate 10 random numbers and store them in an array
+		//    Each random number should be between 1 and 100
+		var randomNum = [];
+    for (let i = 0; i < 10; i++)
+      {
+        randomNum.push(Math.floor(Math.random() * 100) + 1);
+      }
+
+		// Task #5) Display the contents of the array
+		document.write("The random numbers in the array are:" + "<br>");
+    for (let i = 0; i < randomNum.length; i++)
+      {
+        document.write(randomNum[i] + " ");
+      }
+
+		// Task #6) Sort the array in ascending order and then display it again
+		//  NOTE: see the README.md on how to sort a numeric array
+		document.write("<br><br>The random numbers sorted are:" + "<br>");
+    randomNum.sort();
+    for (let i = 0; i < randomNum.length; i++)
+      {
+        document.write(randomNum[i] + " ");
+      }    
+		
+	</script>
+	<hr>
+	
+	<h2>Date</h2>
+	<h3>Date Methods</h3>
+	<script>
+		// Task #7) Prompt the user for their birthday and convert it to a Date object
+		//   Remember - when prompting the user, it comes in as a string
+    var birthday = prompt("Enter your birthday in mm/dd/yyyy format:");
+    var converted = new Date(birthday);
+
+		// Task #8) Display the date the user was born in a format 
+		//   that shows the day of the week, month, date, and year
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    
+    document.write("You were born on: " + days[converted.getDay()] + ", ");
+    document.write(months[converted.getMonth()] + " ");
+    document.write(converted.getDate() + ", " + converted.getFullYear() + "<br>");
+		
+
+		// Task #9) Calculate when the user turned 18 
+    var eighteen = new Date();
+    eighteen.setFullYear(converted.getFullYear() + 18, converted.getMonth(), converted.getDate());
+    
+		// Task #10) Display the 18th birthday in a format 
+		//   that shows the day of the week, month, date, and year
+		document.write("You turned / will turn 18 on: " + days[eighteen.getDay()] + ", ");
+    document.write(months[eighteen.getMonth()] + " ");
+    document.write(eighteen.getDate() + ", " + eighteen.getFullYear() + "<br>");
+		
+	</script>
+	<hr>	
+</body>
+</html>

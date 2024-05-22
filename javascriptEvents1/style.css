@@ -1,0 +1,9 @@
+body {font-family: Arial, Verdana, sans-serif; margin: 20px;}
+h1 {color: blue;}
+h2 {color: green;}
+h3 {color: purple; text-decoration: underline;}
+p {font-style: italic; color: blue; font-weight: bold; padding: 0px;}
+input {padding-bottom: 5px; display: block;}
+label {padding-top: 10px; font-weight: bold; color: blue; display: block;}
+button {color:green;}
+#divClick, #divMouseOver {background-color: yellow; width: 400px; height: 50px;}

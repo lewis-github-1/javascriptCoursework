@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Operators</title>
+	<style>
+	body {font-family: Verdana, Arial, sans-serif}
+	h1 {color: green;}
+	h4 {color: blue; margin-bottom: 5px;}
+	p {padding-left: 20px; margin-top: 5px;}
+	code {font-size: 1.3em; color: red;}
+	</style>
+	<script>
+		var numberOne = 5;
+		var numberTwo = 15;
+		var stringNumber = "15";
+		var strOne = "kathy";
+		var strTwo = "Kathy";
+	</script>
+</head>
+<body>
+	<h1>JavaScript Practice with Operators</h1>
+	
+	<h4>Outputting variables:</h4>
+	<p>
+		<script>
+		document.write("Number variable <code>numberOne</code> is " + "<code>" + numberOne + "</code><br>");
+		document.write("Number variable <code>numberTwo</code> is " + "<code>" + numberTwo + "</code><br>");
+		document.write("String variable <code>stringNumber</code> is " + "<code>" + stringNumber + "</code><br>");
+		document.write("String variable <code>strOne</code> is " + "<code>" + strOne + "</code><br>");
+		document.write("String variable <code>strTwo</code> is " + "<code>" + strTwo + "</code><br>");
+		</script>
+	</p>
+	
+	<h4>1)  Addition operator: <code>numberOne</code> + <code> numberTwo</code></h4>
+	<p><script>
+		document.write(numberOne + numberTwo);
+	</script></p>
+
+	<h4>2)  Addition operator: <code>numberOne</code> + <code>stringNumber</code></h4>
+	<p><script>
+		document.write(numberOne + stringNumber);
+	</script></p>
+	
+	<h4>3)  Greater than operator: <code>numberOne</code> > <code>numberTwo</code></h4>
+	<p><script>
+		document.write(numberOne > numberTwo);
+	</script></p>
+	
+	<h4>4)  Greater than operator: <code>numberOne</code> > <code>stringNumber</code></h4>
+	<p><script>
+		document.write(numberOne > stringNumber);
+	</script></p>
+	
+	<h4>5)  Equality operator: <code>numberTwo</code> == <code>stringNumber</code></h4>
+    <p>
+	<script>
+		if(numberTwo == stringNumber)
+			document.write("The numbers are equal<br>");
+		else
+			document.write("The numbers are not equal<br>");
+	</script>
+	</p>
+	
+	<h4>6)  Strict equality operator: <code>numberTwo</code> === <code>stringNumber</code></h4>
+    <p>
+	<script>
+		if(numberTwo === stringNumber)
+			document.write("The numbers are equal<br>");
+		else
+			document.write("The numbers are not equal<br>");
+	</script>
+	</p>
+	
+	<h4>7)  Equality operator: <code>strOne</code> == <code>strTwo</code></h4>
+    <p>
+	<script>
+		if(strOne == strTwo)
+			document.write("The strings are equal<br>");
+		else
+			document.write("The strings are not equal<br>");
+	</script>
+	</p>
+</body>
+</html>

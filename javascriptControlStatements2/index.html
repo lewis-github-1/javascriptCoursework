@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Conditions and Loops</title>
+	<style>
+	body {font-family: Verdana, Arial, sans-serif}
+	h1 {color: green;}
+	h4 {color: blue; margin-bottom: 5px;}
+	p {padding-left: 20px; margin-top: 5px;}
+	code {font-size: 1.3em; color: red;}
+	</style>
+</head>
+<body>
+	<h1>JavaScript Ch 6 Program</h1>
+	<h4>Using <code>while</code> for input validation</h4>
+	<script>
+		// Task #1: Prompt the user for their hours.
+		// Hours must be between 0 and 40.
+		// Use a loop to check for valid input
+  var hours = prompt("Enter your hours: ");
+  while (hours < 0 || hours > 40) {
+    hours = prompt("Invalid. Enter your hours: ")
+  }
+    
+		// Task #2: Prompt the user for their rate.
+		// Rate must be between 8.25 and 25
+		// Use a loop to check for valid input
+  var rate = prompt("Enter your rate: ");  
+  while (rate < 0 || rate > 40) {
+    rate = prompt("Invalid. Enter your rate: ")
+  }
+
+		// Task #3: Calculate the gross pay
+		// and display the output (look at sample output)
+  var gross = hours * rate;
+    document.write("Hours: " + hours + "<br>");
+    document.write("Rate: $" + rate + "<br>");
+    document.write("============" + "<br>");
+    document.write("Gross: $" + gross.toFixed(2) + "<br>");
+  
+	</script>
+
+	<h4>Using <code>switch</code> statement</h4>
+	<script>
+		// Task #4: Prompt the user for their grade
+		// (You don't need to do input validation - just run with good values)
+		// Display the grade the user gave you
+		// Then, use a switch statement to give them an appropriate message
+		// for the grade letter and display this message.
+		// See sample output
+  var grade = prompt("What is your grade?");
+    switch(grade.toUpperCase()) {
+      case 'A':
+        document.write("Your grade is A<br>")
+        document.write("Above average!")
+        break;
+      case 'B':
+        document.write("Your grade is B<br>")
+        document.write("Above average!")
+        break;
+      case 'C':
+        document.write("Your grade is C<br>")
+        document.write("Average.")
+        break;
+      case 'D':
+        document.write("Your grade is D<br>")
+        document.write("Below average.")
+        break;
+      case 'F':
+        document.write("Your grade is F<br>")
+        document.write("Below average")
+        break;
+      default:
+        document.write("Invalid entry. Enter a grade from A-F.")
+    }
+
+
+
+	</script>
+</html>

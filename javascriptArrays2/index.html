@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<style>
+		body {font-family: Arial, Verdana, sans-serif; margin: 20px;}
+		h1 {color: blue;}
+		h2 {color: green;}
+		h3 {color: purple;}
+		p {font-style: italic; color: blue; font-weight: bold;}
+		.red {color: red;}
+	</style>
+</head>
+<body>
+		<h1>Arrays</h1>
+		<div>	
+			<h2>Arrays</h2>
+    <div id="examples">
+	<script>
+		// function to display array elements so that you don't have to write it each time
+		function displayArray(array) {
+			for (var i = 0; i < array.length; i++) {
+				document.write(array[i] + "<br>");
+			}
+			document.write("<br>");
+		}
+	
+		// Task #1:
+		// Create an empty array named scores
+    var scores = [];
+
+		// Task #2:
+		// Prompt the user for the first test score and 
+		// add it to the array making use of the .length property
+    scores[scores.length] = parseInt(window.prompt("Enter your first test score"));
+    
+  
+		// Task #3:
+		// Prompt the user for the second test score and 
+		// add it to the end of the array using the push() method
+    parseInt(scores.push(window.prompt("Enter your second test score")));
+
+		// Task #4:
+		// Prompt the user for the third test score and
+		// add it to the end of the array using either
+		// the .length property or the .push() method (your choice)
+    scores[scores.length] = parseInt(window.prompt("Enter your third test score"));
+
+		// Task #5:
+		// Call the displayArray() function to display the values
+		// in the array
+    document.write("<h3>Displaying array before sorting:</h3>");
+    displayArray(scores);
+
+
+		// Task #6:
+		// Sort the array using the appropriate method
+		// and then call the displayArray() function to display 
+		// the array
+    document.write("<h3>Displaying array after sorting:</h3>");
+    scores.sort();
+    displayArray(scores);
+    
+
+		// Task #7:
+		// Reverse the order of the array using the appropriate
+		// method and then call the displayArray() function to 
+		// display the results
+    document.write("<h3>Displaying array after reversing:</h3>");
+    scores.reverse();
+    displayArray(scores);
+
+		// Task #8:
+		// Use a loop to sum the total of the scores and then
+		// calculate the average.  
+		// Use the .length property in any place where 
+		// you need to know how many items are in the array.
+		// Display the total and the average (2 decimal places
+		// on the average)
+    document.write("<h3>Displaying total and average:</h3>");
+    var sum = 0;
+    
+    for (let i = 0; i < scores.length; i++) {
+      sum += parseInt(scores[i]);
+    }
+    var average = sum / scores.length;
+    document.write("<p>Total is: " + sum + "<br></p>");
+    document.write("<p>Average is: " + average.toFixed(2) + "</p>");
+
+		// Task #9 - Extra Credit
+		// Find and display the highest and lowest test scores
+		// Do this PROGRAMMATICALLY - in other words, don't
+		// try to figure out the values yourself and display them -
+		// let the code figure out which ones they are
+		document.write("<h3 class=\"red\">Extra Credit - high and low:</h3>");
+    var low = 0;
+    var high = 0;
+
+    scores.sort();
+    low = scores[0];
+    high = scores[scores.length - 1];
+    document.write("<p>High score is: " + high + "<br></p>");
+    document.write("<p>Low score is: " + low + "<br></p>");
+    
+		
+	</script>
+  </div>
+</body>
+</html>

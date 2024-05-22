@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+	<title>Objects</title>
+	<style>
+		body {font-family: Arial, Verdana, sans-serif; margin: 20px;}
+		h1 {color: blue;}
+		h2 {color: green;}
+		h3 {color: purple; text-decoration: underline;}
+		p {font-style: italic; color: blue; font-weight: bold; padding: 0px;}
+		input {padding-bottom: 5px; display: block;}
+		label {padding-top: 10px; font-weight: bold; color: blue; display: block;}
+		button {color:green;}
+	</style>
+</head>
+<body>
+	<h1>Objects Practice</h1>	
+	<h2>Objects</h2>
+	<script>
+		// Task #1:  Create a student using literal notation  (replace my name with yours)
+		document.writeln("Creating a student object template....<br><br>");
+    var student1 = {};
+    student1.firstName = "Lewis";
+    student1.lastName = "Towne";
+    student1.major = "Programming";
+		
+		// Task #2: Display the student
+		document.writeln("<b>My student info is:</b><br>");
+		document.writeln("<b>=================================</b><br>");
+    document.writeln(student1.firstName + "<br>");
+    document.writeln(student1.lastName + "<br>");
+		document.writeln(student1.major + "<br><br>");
+
+		// Task #3:  Use the forin to loop through student1's properties:
+		document.writeln("<b>Using a for-in loop, the properties are:</b><br>");
+		document.writeln("<b>=================================</b><br>");
+    for (var prop in student1) {
+      document.write("<code>" + prop + "</code> property is set to: " + student1[prop] + "<br>");
+    }
+    document.writeln("<br>");
+		
+		// Task #4:  Create a second student using literal notation
+    var student2 = {
+      firstName: "John",
+      lastName: "Doe",
+      major: "Networking"
+    };
+	
+		// Task #5:  Create a third student, using literal notation and assigning properties after the declaration
+    var student3 = {};
+    student3.firstName = "Jane";
+    student3.lastName = "Doe";
+    student3.major = "Accounting";
+		
+		// Task #6:  Add all 3 students to an array
+    var students = [student1, student2, student3];
+			
+		// Task #7: Loop through the array of students and display them
+		document.writeln("<b>Looping through the array of students:</b></br>");
+		document.writeln("<b>=================================</b></br>");		
+    for (var i = 0; i < students.length; i++) {
+      document.writeln("Name: " + students[i].firstName + " " + students[i].lastName + "<br>");
+      document.writeln("Major: " + students[i].major + "<br><br>");
+    }
+	</script>
+</body>
+</html>

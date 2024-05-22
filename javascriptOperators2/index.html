@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Operators</title>
+	<style>
+	body {font-family: Verdana, Arial, sans-serif}
+	h1 {color: green;}
+	h4 {color: blue; margin-bottom: 5px;}
+	p {padding-left: 20px; margin-top: 5px;}
+	code {font-size: 1.3em; color: red;}
+	</style>
+	<script>
+		// Task 1:  Create a function named calcArea() that accepts the 
+		// 		radius of a circle as a parameter and returns the 
+		//		area (formula is PI x radius squared)
+		//		NOTE:  Use a built-in constant for the value of PI and
+		//		use with the JS exponentiation operator the applicable method
+		//		of the Math class to square the radius 
+		//		Refer to the resources in instructions for help on this step
+  function calcArea(radius){
+    const PI = Math.PI;
+    return (PI * radius ** 2).toFixed(2);
+  }
+
+	</script>
+</head>
+<body>
+	<h1>JavaScript Operators Assignment</h1>
+	
+	<h4><code>calcArea()</code> using a number</h4>
+		<script>
+			// Task 2:  
+			// Create a variable and store the numeric value 5 in it
+			// Output th results of passing that variable to the calcArea() function,
+			// displaying the results with 2 decimal places
+      var number = 5;
+      document.write(calcArea(number));
+      
+		</script>	
+	<hr>
+	
+	<h4><code>calcArea()</code> using a number stored as a string</h4>
+		<script>
+			// Task 3:  
+			// Create a variable and store the string value 5 in it
+			// Output th results of passing that variable to the calcArea() function,
+			// display the results with 2 decimal places
+      var string = "5";
+      document.write(calcArea(string));
+
+		</script>	
+	<hr>
+	
+	<h4>Difference between <code>==</code> operator and the <code>===</code> operator</code></h4>
+		<script>
+			// Task 4:  
+			// Create a variable and store the string value 10 in it
+			// Create a varaible and store the numeric value 10 in it
+			// Output the results of comparing these 2 variables using the == operator
+			// Output the results of comparing these 2 variables using the === operator
+      var stringTen = "10";
+      var numericTen = 10;
+
+      document.write("Using <code> ==</code>: ", stringTen == numericTen, "<br><br>");      
+      document.write("Using <code> ===</code>: ", stringTen === numericTen);
+
+		</script>
+	
+	<hr>
+	
+
+	
+</body>
+</html>

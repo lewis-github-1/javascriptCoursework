@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Accessing DOM</title>
+	<style>
+		body {font-family: Arial, Verdana, sans-serif; margin-left: 50px;}
+		h1 {color: blue;}
+		h2 {color: green;}
+		h3 {color: purple;}
+		.blue {color: blue;}
+        .red {color: red;}
+		.green {color: green;}
+		.purple {color: purple;}
+        .italic {font-style: italic;}
+        .orange {color: orange;}
+        input {margin-bottom: 10px;}
+	</style>
+	<script>
+    "use strict";
+    
+    var $ = function(id){
+     return document.getElementById(id);
+    };
+
+    var addBlue = function(){
+      var item = document.getElementById("para1");
+      item.setAttribute("class", "blue");
+    };
+
+    var toggleRed = function(){
+      var swapRed = document.getElementById("redToggle");
+
+      if (swapRed.hasAttribute("class"))
+      {
+        swapRed.removeAttribute("class");
+      }
+      else
+      {
+        swapRed.setAttribute("class", "red");
+      }
+    };
+
+    var addItalic = function(){
+      var items = document.getElementsByTagName("li");
+      for (var i = 0; i < items.length; i++)
+        {
+          items[i].setAttribute("class", "italic");
+        }
+    };
+
+    var changeText = function(){
+      var greenClass = document.getElementsByClassName("green");
+      for (var i = 0; i < greenClass.length; i++)
+        {
+          greenClass[i].firstChild.nodeValue = 'Changed the text for nodes with class="green"';
+        }
+    };
+
+    var addOrange = function() {
+      var h2s = document.getElementsByTagName("h2");
+      for (var i = 0; i < h2s.length; i++)
+        {
+          h2s[i].setAttribute("class", "orange");
+        }
+    };
+    
+
+    
+    window.onload = function() {
+      // Attach HTML events to JS handler functions
+      $("addclass").onclick = addBlue;
+      $("toggleRed").onclick = toggleRed;
+      $("byTag").onclick = addItalic;
+      $("byClass").onclick = changeText;
+      $("clickme").onclick = addOrange;
+    };
+	
+	</script>
+</head>
+
+<body>
+	<h1>Scripting the DOM</h1>
+	<div id="accessing">
+		<h2>Access by ID - Set Attribute</h2>
+		<p id="para1">This paragraph has an ID of "para1"<br>
+			The code will add an attribute of class="blue"</p>
+		<input type="button" id="addclass" value="Add Blue Class to Paragraph"><br>
+	
+		<h2>Access by ID - Check for Attribute</h2>
+		<p id="redToggle" class="red">This paragraph has a class of "red".<br>
+			The code will use an if statement to check for attribute of class="red"</p>
+		<input type="button" id="toggleRed" value="Toggle Red Class for Paragraph"><br>
+		
+		<h2>Access by Tag Name</h2>
+		<p>The list items below do not have a class when the page loads</p>
+		<p>The code will access the li tags and add class="italic"</p>
+		<ul>
+			<li>First item</li>
+			<li>Second item</li>
+			<li>Third item</li>
+		</ul>
+		<input type="button" id="byTag" value="Add Italics to List Items"><br>
+		
+		<h2>Access by Class Name</h2>
+		<p class="green">This paragraph has class="green"</p>
+		<p class="purple">This paragraph has class="purple"</p>
+		<p class="green">This paragraph has class="green"</p>
+		<input type="button" id="byClass" value="Change Text of Green Class"><br>
+	</div>
+	
+	<div id="other">
+		<h2>Click on Something Other Than Button</h2>
+		<h3 id="clickme">Click on this line of text to add class="orange" to all the h2 tags</h3>
+	</div>
+</body>
+
+</html>

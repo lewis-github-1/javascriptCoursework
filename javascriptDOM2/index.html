@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Accessing DOM</title>
+<style>
+		body {font-family: Arial, Verdana, sans-serif; margin-left: 50px;}
+		h1 {color: blue;}
+		h3 {color: green;}
+		.blue {color: blue;}
+        .red {color: red;}
+		.green {color: green;}
+		.purple {color: purple; font-weight: bold;}
+        input {margin-bottom: 10px;}
+	</style>
+	
+</head>
+
+<body>
+	<h1>DOM</h1>
+	
+	<p id="changeText">Paragraph A</p>
+	<p class="red">Paragraph B</p>
+	<p>Paragraph C</p>
+	<p class="blue">Paragraph D</p>
+	<p class="blue">Paragraph E</p>
+	<p id="parF" class="red">Paragraph F</p>
+		
+	<ul id="mylist">
+	<li>CSCI-100 Intro to C++</li>
+	<li>CSCI-101 Intro to Python</li>
+	<li>CSCI-103 Intro to Java</li>
+	</ul>
+	
+	<input type="button" id="btnOne" value="Task 1 - Change text of paragraph A"><br>
+	<input type="button" id="btnTwo" value="Task 2 - Change color paragraph B to green"><br>
+	<input type="button" id="btnThree" value="Task 3 - Change paragraph C to an h3"><br>
+	<input type="button" id="btnFour" value="Task 4 - Change paragraphs D and E to purple and bold"><br>
+	<input type="button" id="btnFive" value="Task 5 - Change paragraph F to orange, 150%, and bold"><br>
+	<input type="button" id="btnSix" value="Task 6 - Add paragraph G "><br>	
+	<input type="button" id="btnSeven" value="Task 7 - Remove second list item"><br>	
+	
+	<p id="task8">Task 8 - Click this paragraph to make it bold and lime green (lime)</p>
+</body>
+
+<script>
+		"use strict";
+		
+    // Write the functions here
+  // Function 1 - change paragraph a text
+    var taskOne = function()
+    {
+      var paragraphA = document.getElementById("changeText");
+      paragraphA.textContent = "My text has been changed";
+    };
+  // Function 2 - change paragraph b color
+    var taskTwo = function()
+    {
+      var paragraphB = document.getElementsByTagName("p")[1];
+      paragraphB.setAttribute("class", "green");
+    };
+  // Function 3 - change paragraph c from <p> to <h3>
+    var taskThree = function()
+    {
+      var paragraphC = document.getElementsByTagName("p")[2];
+      paragraphC.innerHTML = "<h3>" + paragraphC.innerHTML + "</h3>";
+    };
+  // Function 4 - change paragraphs d and e color to purple and bold
+    var taskFour = function()
+    {
+      var paragraphD = document.getElementsByClassName("blue");
+      for (let i = 0; i < paragraphD.length; i++)
+        {
+          paragraphD[i].setAttribute("class", "purple");
+          paragraphD[i].style.color = "purple";
+          paragraphD[i].style.fontWeight = "bold";
+        };
+    };
+  // Function 5 - change paragraph f to orange, 150%, and bold
+    var taskFive = function()
+    {
+      var paragraphF = document.getElementById("parF");
+        paragraphF.style.fontSize = "150%"; 
+        paragraphF.style.color = "orange";
+        paragraphF.style.fontWeight = "bold";        
+    };
+  
+  // Function 6 - write paragraph g after paragraph f
+    var taskSix = function()
+    {
+      let para6 = document.createElement("p");
+      let node6 = document.createTextNode("Paragraph G");
+      para6.style.color = "blue";
+      para6.style.fontWeight = "bold";
+      para6.appendChild(node6);
+      let afterF = document.getElementById("parF");
+      afterF.insertAdjacentElement("afterend", para6);
+    };
+  // Function 7 - remove the 2nd list item
+    var taskSeven = function()
+    {
+      var removeList = document.querySelectorAll("#mylist li");
+      removeList[1].remove();
+    };
+  
+  // Function 8 - click on last paragraph to make it bold and lime green
+    var taskEight = function()
+    {
+      var paragraph8 = document.getElementById("task8");
+      paragraph8.style.color = "lime";
+      paragraph8.style.fontWeight = "bold";
+    };
+		
+		// Add event listeners
+		document.getElementById("btnOne").addEventListener("click", taskOne);
+    document.getElementById("btnTwo").addEventListener("click", taskTwo);
+    document.getElementById("btnThree").addEventListener("click", taskThree);
+    document.getElementById("btnFour").addEventListener("click", taskFour);
+    document.getElementById("btnFive").addEventListener("click", taskFive);
+    document.getElementById("btnSix").addEventListener("click", taskSix);
+    document.getElementById("btnSeven").addEventListener("click", taskSeven);
+    document.getElementById("task8").addEventListener("click", taskEight);
+  
+	</script>
+
+</html>

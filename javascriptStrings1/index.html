@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+	<title>Strings</title>
+	<style>
+		body {font-family: Arial, Verdana, sans-serif; margin: 20px;}
+		h1 {color: blue;}
+		h2 {color: green;}
+		h3 {color: purple; text-decoration: underline;}
+	</style>
+</head>
+<body>
+	<h1>Strings</h1>	
+	<h2><code>indexOf and substr</code></h2>
+	<script>
+    var myString = "gandalf@aol.com";
+    var position = myString.indexOf("@");
+    var userName = myString.substr(0, position);
+    var domainName = myString.substr(position + 1);
+    document.write("Email address is: <b>" + myString + "</b><br>");
+    document.write("The user name is: <b>" + userName + "</b><br>");
+    document.write("The domain name is: <b>" + domainName + "</b><br>");
+  </script>
+  
+	<h2><code>slice</code></h2>
+  <script>
+    var longString = "The big brown fox jumped over the lazy dog";
+    var newString = longString.slice(3,7);
+    document.write("The original string is: <b>" + longString + "</b><br>");
+    document.write("The sliced string is: <b>" + newString + "</b><br>");
+  </script>
+	
+	<h2><code>split</code></h2>
+	<script>
+    var delimitedString = "cat:dog:bird:mouse";
+    document.write("The delimited string is: <b>" + delimitedString + "</b><br>");
+
+    var myAnimals = delimitedString.split(":"); 
+    for (var i = 0; i < myAnimals.length; i++)
+      {
+        document.write("Animal at position " + i + " is: <b>");
+        document.write(myAnimals[i] + "</b><br>");
+      }
+  </script>
+  
+</body>
+</html>

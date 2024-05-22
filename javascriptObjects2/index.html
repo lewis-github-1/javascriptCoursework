@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+	<title>Objects</title>
+	<style>
+		body {font-family: Arial, Verdana, sans-serif; margin: 20px;}
+		h1 {color: blue;}
+		h2 {color: green;}
+		h3 {color: purple; text-decoration: underline;}
+		p {font-style: italic; color: blue; font-weight: bold; padding: 0px;}
+		input {padding-bottom: 5px; display: block;}
+		label {padding-top: 10px; font-weight: bold; color: blue; display: block;}
+		button {color:green;}
+	</style>
+</head>
+<body>
+	<h1> Objects Program</h1>	
+	<h2>Objects</h2>
+	<script>
+		// NOTE:  All numeric values should output as 2 decimal places
+		// (use the toFixed() method)
+		// Also, put a $ sign in any output that represents dollars
+		
+		// Task #1:  Create an employee object with the following
+		// information:
+		// Name is John Doe.  Rate is $13.25/hr.  Hours are 20.25
+		document.write("Creating an employee object ....<br><br>");
+    var employee1 = {};
+    employee1.name = "John Doe";
+    employee1.rate = 13.25;
+    employee1.hours = 20.25;
+  	      
+		// Task #2: Display the employee
+    document.write("<b>The employee info is:</b><br>");
+		document.write("<b>=================================</b><br>");
+    document.write("Name: " + employee1.name + "<br>");
+    document.write("Rate: $" + employee1.rate.toFixed(2) + "<br>");
+    document.write("Hours: " + employee1.hours.toFixed(2) + "<br>");
+    document.write("Gross: $" + (employee1.rate * employee1.hours).toFixed(2) + "<br><br>")
+		
+		// Task #3:  Use the forin to loop through the employee's properties:
+		document.write("<b>Using a for-in loop, the properties are:</b><br>");
+		document.write("<b>=================================</b><br>");
+    for (var prop in employee1) {
+      document.write("<code>" + prop + "</code> property is set to: " + employee1[prop] + "<br>")
+    };
+    document.write("<br>");
+		
+		// Task #4:  Create a second employee object with the following
+		// information
+		// Name is Jane Doe.  Rate is $15.25.  Hours are 25.25
+    var employee2 = {};
+    employee2.name = "Jane Doe";
+    employee2.rate = 15.25;
+    employee2.hours = 25.25;
+  		
+		// Task #5:  Create a third employee object with the following
+		// information
+		// Name is Tom Sawyer.  Rate is $13.50.  Hours are 30.50
+    var employee3 = {};
+    employee3.name = "Tom Sawyer";
+    employee3.rate = 13.50;
+    employee3.hours = 30.50;
+  			
+		// Task #6:  Add all 3 employees to an array
+    var employees = [employee1, employee2, employee3];
+			
+		// Task #7: Loop through the array of employees and display them
+		document.write("<b>Looping through the array of employees:</b></br>");
+		document.write("<b>=================================</b></br>");
+    for (i = 0; i < employees.length; i++) {
+      document.write("Name: " + employees[i].name + "<br>");
+      document.write("Rate: $" + employees[i].rate.toFixed(2) + "<br>");
+      document.write("Hours: " + employees[i].hours.toFixed(2) + "<br>");
+      document.write("Gross: $" + (employees[i].rate * employees[i].hours).toFixed(2) + "<br><br>");
+    }
+	
+	</script>
+</body>
+</html>
